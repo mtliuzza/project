@@ -3,7 +3,7 @@ title: "Inflation Data"
 author: "Marco Tullio Liuzza"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
+  html_document:
     df_print: paged
 repro:
   packages:
@@ -49,7 +49,10 @@ inflation %>%
   pivot_longer(c(expectation, perception)) %>% 
   ungroup() %>% 
   ggplot() +
-  geom_line(aes(date, value, color = name)) + theme_minimal()
+  geom_line(aes(date, value, color = name)) + theme_minimal() +
+  ylab("subjective inflation in %-points") +
+  labs(color = "") +
+  theme(legend.position = c(.1, .9))
 ```
 
 A code chunk is for longer code/output:
