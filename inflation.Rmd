@@ -49,15 +49,13 @@ inflation %>%
   pivot_longer(c(expectation, perception)) %>% 
   ungroup() %>% 
   ggplot() +
-  geom_line(aes(date, value, color = name)) +
-  geom_point() + geom_stat() + ggtitle('X')
-  NULL
+  geom_line(aes(date, value, color = name)) 
 ```
 
 A code chunk is for longer code/output:
 
 ```{r}
-with(mtcars, plot(hp, mpg))
+with(mtcars, plot(hp, mpg, lwd = 3))
 ```
 
 Inline code is for single numbers/short text:
