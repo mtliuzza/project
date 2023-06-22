@@ -54,13 +54,3 @@ inflation %>%
   labs(color = "") +
   theme(legend.position = c(.1, .9))
 ```
-
-A code chunk is for longer code/output:
-
-```{r}
-with(mtcars, plot(hp, mpg, lwd = 3))
-```
-
-Inline code is for single numbers/short text:
-
-We have 32 cars.
